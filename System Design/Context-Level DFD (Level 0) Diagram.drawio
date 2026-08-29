@@ -1,0 +1,121 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="bw_NHG9Ij9GQPQSZGu4N">
+    <mxGraphModel dx="1348" dy="844" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="proc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=14;" value="0&#xa;Video Project&#xa;Management System" vertex="1">
+          <mxGeometry height="140" width="200" x="550" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_pm" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Project Manager" vertex="1">
+          <mxGeometry height="70" width="180" x="560" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_admin" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Admin" vertex="1">
+          <mxGeometry height="70" width="180" x="980" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_export" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" value="Export Platforms&#xa;(YouTube / IG / Broadcast)" vertex="1">
+          <mxGeometry height="70" width="180" x="1080" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_editsw" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" value="Editing Software&#xa;(Premiere / Resolve)" vertex="1">
+          <mxGeometry height="70" width="180" x="980" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_qa" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="QA Reviewer" vertex="1">
+          <mxGeometry height="70" width="180" x="560" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_cloud" parent="1" style="whiteSpace=wrap;html=1;dashed=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" value="Cloud Storage&#xa;(optional sync)" vertex="1">
+          <mxGeometry height="70" width="180" x="140" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_editor" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Editor" vertex="1">
+          <mxGeometry height="70" width="180" x="40" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" edge="1" parent="1" source="ent_editor" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="proc" value="Footage &amp; clip ratings">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f2" edge="1" parent="1" source="proc" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ent_editor" value="Dashboard &amp; checklist status">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f3" edge="1" parent="1" source="ent_pm" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" target="proc" value="Project &amp; phase requests">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="704.06" y="219.57" />
+              <mxPoint x="704.06" y="219.57" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4" edge="1" parent="1" source="proc" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ent_pm" value="Phase progress reports">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="350.5" />
+              <mxPoint x="530" y="75" />
+            </Array>
+            <mxPoint x="616.0000000000001" y="352.99464817704256" as="sourcePoint" />
+            <mxPoint x="616" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f5" edge="1" parent="1" source="ent_qa" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="proc" value="Checklist reviews">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6" edge="1" parent="1" source="proc" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ent_qa" value="Items pending review">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7" edge="1" parent="1" source="ent_admin" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="proc" value="User &amp; preset config">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="155" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8" edge="1" parent="1" source="proc" style="endArrow=classic;html=1;strokeColor=#666666;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ent_admin" value="Config confirmations">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="155" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f9" edge="1" parent="1" source="ent_editsw" style="endArrow=classic;html=1;strokeColor=#b85450;fontColor=#b85450;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="proc" value="Project file changes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="668.1" y="662.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f10" edge="1" parent="1" source="proc" style="endArrow=classic;html=1;strokeColor=#b85450;fontColor=#b85450;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="ent_editsw" value="Folder / bin structure">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685.9" y="627.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f11" edge="1" parent="1" source="proc" style="endArrow=classic;html=1;strokeColor=#b85450;fontColor=#b85450;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ent_export" value="Rendered exports">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f12" edge="1" parent="1" source="proc" style="dashed=1;endArrow=classic;html=1;strokeColor=#b85450;fontColor=#b85450;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" target="ent_cloud" value="Media backup">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="635.8" y="659.7" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f13" edge="1" parent="1" source="ent_cloud" style="dashed=1;endArrow=classic;html=1;strokeColor=#b85450;fontColor=#b85450;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.362;entryY=0.981;entryDx=0;entryDy=0;entryPerimeter=0;" target="proc" value="Synced files">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="622" y="628" />
+            </Array>
+            <mxPoint x="304" y="638" as="sourcePoint" />
+            <mxPoint x="634" y="463" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

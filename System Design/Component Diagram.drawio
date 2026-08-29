@@ -1,0 +1,182 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="noc9oYYXz8fJAM52bd5s">
+    <mxGraphModel dx="1225" dy="726" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="client" parent="1" style="shape=component;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Client Application" vertex="1">
+          <mxGeometry height="60" width="200" x="520" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gAPI" parent="1" style="swimlane;startSize=24;fillColor=#d5e8d4;strokeColor=#82b366;html=1;fontStyle=1;" value="API Gateway" vertex="1">
+          <mxGeometry height="160" width="220" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="api_auth" parent="gAPI" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Auth Middleware" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="api_router" parent="gAPI" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Request Router" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="gWF" parent="1" style="swimlane;startSize=24;fillColor=#d5e8d4;strokeColor=#82b366;html=1;fontStyle=1;" value="Workflow Engine" vertex="1">
+          <mxGeometry height="160" width="220" x="280" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="wf_sm" parent="gWF" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Phase State Machine" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="wf_gate" parent="gWF" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Gate Validator" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="gFM" parent="1" style="swimlane;startSize=24;fillColor=#d5e8d4;strokeColor=#82b366;html=1;fontStyle=1;" value="File &amp; Folder Manager" vertex="1">
+          <mxGeometry height="160" width="220" x="520" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fm_gen" parent="gFM" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Folder Template Generator" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="fm_naming" parent="gFM" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Naming Convention Validator" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="gCL" parent="1" style="swimlane;startSize=24;fillColor=#d5e8d4;strokeColor=#82b366;html=1;fontStyle=1;" value="Checklist Engine" vertex="1">
+          <mxGeometry height="160" width="220" x="760" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_tmpl" parent="gCL" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Checklist Template Service" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_eval" parent="gCL" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="QC Rule Evaluator" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="gEX" parent="1" style="swimlane;startSize=24;fillColor=#d5e8d4;strokeColor=#82b366;html=1;fontStyle=1;" value="Export Manager" vertex="1">
+          <mxGeometry height="160" width="220" x="1000" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ex_preset" parent="gEX" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Preset Resolver" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="ex_queue" parent="gEX" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;" value="Render Queue Dispatcher" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="gDAL" parent="1" style="swimlane;startSize=24;fillColor=#fff2cc;strokeColor=#d6b656;html=1;fontStyle=1;" value="Data Access Layer" vertex="1">
+          <mxGeometry height="120" width="460" x="280" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="dal_repo" parent="gDAL" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;" value="Repository Layer" vertex="1">
+          <mxGeometry height="60" width="200" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dal_storage" parent="gDAL" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;" value="Storage Adapter" vertex="1">
+          <mxGeometry height="60" width="200" x="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Database" vertex="1">
+          <mxGeometry height="90" width="180" x="320" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="storage" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Media &amp; File Storage" vertex="1">
+          <mxGeometry height="90" width="180" x="560" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="client" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="api_router" value="REST API">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="263" y="70" />
+              <mxPoint x="263" y="279" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="api_router" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="wf_sm" value="IWorkflow">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="277" y="279" />
+              <mxPoint x="277" y="219" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="api_router" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="fm_gen" value="IFileOps">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="320" />
+              <mxPoint x="510" y="320" />
+              <mxPoint x="510" y="219" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="api_router" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="cl_tmpl" value="IChecklist">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="334" />
+              <mxPoint x="750" y="334" />
+              <mxPoint x="750" y="219" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="api_router" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ex_preset" value="IExport">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="348" />
+              <mxPoint x="983" y="348" />
+              <mxPoint x="983" y="219" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="wf_sm" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="dal_repo" value="IDataAccess">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="496" y="219" />
+              <mxPoint x="496" y="362" />
+              <mxPoint x="400" y="362" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="wf_gate" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="dal_repo" value="IDataAccess (read checklist status)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="372" />
+              <mxPoint x="400" y="372" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="fm_gen" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="dal_storage" value="IStorageAccess">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="524" y="219" />
+              <mxPoint x="524" y="362" />
+              <mxPoint x="620" y="362" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="cl_eval" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="dal_repo" value="IDataAccess (write checklist status)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="376" />
+              <mxPoint x="400" y="376" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="ex_preset" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="dal_repo" value="IDataAccess">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="997" y="219" />
+              <mxPoint x="997" y="390" />
+              <mxPoint x="400" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="ex_queue" style="dashed=1;endArrow=open;html=1;strokeColor=#333333;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="dal_storage" value="IStorageAccess">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1110" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="dal_repo" style="endArrow=open;html=1;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="db" value="SQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="550" />
+              <mxPoint x="410" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="dal_storage" style="endArrow=open;html=1;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="storage" value="File I/O">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="550" />
+              <mxPoint x="650" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
