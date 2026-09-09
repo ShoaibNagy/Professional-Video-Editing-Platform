@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in — VideoPM</title>
+  <meta name="description" content="Log in to VideoPM to access your team's video production projects, phases, and checklists." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="auth-header">
+    <a class="logo" href="../Landing Page/index.html">
+      <img class="logo-mark" src="../assets/icon.svg" alt="" width="26" height="26" />
+      VideoPM
+    </a>
+
+    <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="2" x2="12" y2="4.5"/>
+          <line x1="12" y1="19.5" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="4.5" y2="12"/>
+          <line x1="19.5" y1="12" x2="22" y2="12"/>
+          <line x1="4.9" y1="4.9" x2="6.6" y2="6.6"/>
+          <line x1="17.4" y1="17.4" x2="19.1" y2="19.1"/>
+          <line x1="4.9" y1="19.1" x2="6.6" y2="17.4"/>
+          <line x1="17.4" y1="6.6" x2="19.1" y2="4.9"/>
+        </g>
+      </svg>
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+      <span class="visually-hidden">Switch to dark theme</span>
+    </button>
+  </header>
+
+  <main id="main" class="auth-layout">
+    <section class="auth-brand">
+      <div class="auth-brand-inner">
+        <h1>Every project, the same structure, every time.</h1>
+        <p>
+          Log in to pick up exactly where your team left off &mdash; the right phase, the
+          right checklist, the right folder.
+        </p>
+        <ul class="trust-list">
+          <li>WCAG AAA accessible, in both themes</li>
+          <li>The same folder structure on every project</li>
+          <li>Checklists that actually gate progress</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="auth-form-panel">
+      <div class="auth-form-wrap">
+        <a class="logo logo-compact" href="../Landing Page/index.html">
+          <img class="logo-mark" src="../assets/icon.svg" alt="" width="26" height="26" />
+          VideoPM
+        </a>
+
+        <h2>Log in to VideoPM</h2>
+        <p class="form-subtext">Enter your details to access your team&rsquo;s projects.</p>
+
+        <output class="form-status" id="formStatus" aria-live="polite" hidden></output>
+
+        <form id="loginForm" novalidate>
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="you@studio.com"
+              required
+              aria-describedby="emailError"
+            />
+            <p class="field-error" id="emailError" hidden></p>
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <div class="password-field">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="current-password"
+                required
+                aria-describedby="passwordError"
+              />
+              <button type="button" class="password-toggle" id="passwordToggle" aria-pressed="false">
+                <svg class="icon icon-eye" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+                <svg class="icon icon-eye-off" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                  <line x1="3" y1="21" x2="21" y2="3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+                <span class="visually-hidden">Show password</span>
+              </button>
+            </div>
+            <p class="field-error" id="passwordError" hidden></p>
+          </div>
+
+          <div class="field-row">
+            <label class="checkbox-field">
+              <input type="checkbox" id="remember" name="remember" />
+              Stay logged in on this device
+            </label>
+            <a class="forgot-link" href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-large">Log in</button>
+        </form>
+
+        <div class="divider"><span>or</span></div>
+
+        <p class="signup-line">
+          Don&rsquo;t have an account?
+          <a href="../Registration Page/index.html">Sign up</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
