@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VideoPM — One workflow for every video project</title>
+  <meta name="description" content="VideoPM tracks a video project from raw footage to final export, with the same folder structure, phase checklists, and export presets every time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top">
+        <img class="logo-mark" src="../assets/icon.svg" alt="" width="26" height="26" />
+        VideoPM
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#accessibility">Accessibility</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <line x1="12" y1="2" x2="12" y2="4.5"/>
+              <line x1="12" y1="19.5" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="4.5" y2="12"/>
+              <line x1="19.5" y1="12" x2="22" y2="12"/>
+              <line x1="4.9" y1="4.9" x2="6.6" y2="6.6"/>
+              <line x1="17.4" y1="17.4" x2="19.1" y2="19.1"/>
+              <line x1="4.9" y1="19.1" x2="6.6" y2="17.4"/>
+              <line x1="17.4" y1="6.6" x2="19.1" y2="4.9"/>
+            </g>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+          <span class="visually-hidden">Switch to dark theme</span>
+        </button>
+
+        <a class="btn btn-text" href="../Login Page/index.html">Log in</a>
+        <a class="btn btn-primary" href="../Registration Page/index.html">Get started</a>
+
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav">
+          <span class="visually-hidden">Open menu</span>
+          <span class="menu-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <ul>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#login">Log in</a></li>
+      </ul>
+      <a class="btn btn-primary btn-block" href="../Registration Page/index.html">Get started</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>One folder structure. One checklist. Every project.</h1>
+          <p class="lead">
+            VideoPM tracks a video project from raw footage to final export &mdash; phase by
+            phase, with the same folder template, naming convention, and QC checklist every
+            time, so nothing ships until it&rsquo;s actually ready.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-large" href="#get-started">Get started</a>
+            <a class="btn btn-secondary btn-large" href="#workflow">See how the workflow works</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="preview-window">
+            <div class="preview-chrome">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="preview-card">
+              <div class="preview-card-top">
+                <div>
+                  <p class="preview-title">Client Wedding Highlight Reel</p>
+                  <p class="preview-meta">Updated 2 days ago</p>
+                </div>
+                <span class="phase-badge">Phase 4 &middot; Color &amp; Audio QC</span>
+              </div>
+              <div class="preview-status">
+                <span class="status-dot status-dot--warning"></span>
+                6 of 8 checklist items complete
+              </div>
+              <div class="preview-progress">
+                <div class="preview-progress-track">
+                  <div class="preview-progress-fill" id="heroProgressFill"></div>
+                </div>
+                <span class="preview-progress-label">4 / 6 phases</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT / FEATURES -->
+    <section class="features" id="product">
+      <div class="section-inner">
+        <p class="section-intro">
+          Built around the parts of a video production that are easiest to get wrong.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Folders, generated automatically</h3>
+            <p>
+              Every project starts with the same numbered folder template and naming
+              convention, so raw footage and finished exports never end up in the same
+              place by accident.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Phases that gate on real checklists</h3>
+            <p>
+              A project can&rsquo;t move to the next phase until its checklist for the
+              current one is actually complete &mdash; not just marked done from memory.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Color, audio, and export QC built in</h3>
+            <p>
+              Every clip and every export gets checked against the same criteria, every
+              time, before it goes out the door.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Export presets, saved once</h3>
+            <p>
+              Set a platform&rsquo;s resolution, frame rate, and codec once. Reuse it on
+              every project that ships there.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section class="workflow" id="workflow">
+      <div class="section-inner">
+        <h2>How a project moves through VideoPM</h2>
+        <p class="section-intro">
+          Six phases, the same order, every time &mdash; with a checklist gate between
+          each one.
+        </p>
+
+        <ol class="phase-stepper">
+          <li>
+            <span class="phase-number">1</span>
+            <div>
+              <h3>Ingest &amp; Organize</h3>
+              <p>Footage lands in the standard folder structure and matching software bins.</p>
+            </div>
+          </li>
+          <li>
+            <span class="phase-number">2</span>
+            <div>
+              <h3>Edit Prep</h3>
+              <p>Clips get rated Reject, Maybe, or Select before the creative edit starts.</p>
+            </div>
+          </li>
+          <li>
+            <span class="phase-number">3</span>
+            <div>
+              <h3>Rough Cut &amp; Edit</h3>
+              <p>The story gets built, from rough cut to fine cut.</p>
+            </div>
+          </li>
+          <li>
+            <span class="phase-number">4</span>
+            <div>
+              <h3>Color &amp; Audio QC</h3>
+              <p>A checklist gates this phase: white balance, levels, track separation.</p>
+            </div>
+          </li>
+          <li>
+            <span class="phase-number">5</span>
+            <div>
+              <h3>Export &amp; Delivery</h3>
+              <p>Platform presets render the final files, checked once more before delivery.</p>
+            </div>
+          </li>
+          <li>
+            <span class="phase-number">6</span>
+            <div>
+              <h3>Review &amp; Improve</h3>
+              <p>What worked, and what didn&rsquo;t, gets logged for the next project.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ACCESSIBILITY -->
+    <section class="accessibility" id="accessibility">
+      <div class="section-inner accessibility-inner">
+        <div class="accessibility-copy">
+          <h2>Built to WCAG AAA, not just AA</h2>
+          <p>
+            Most video tools treat accessibility as a marketing word. VideoPM treats it as
+            a contrast ratio you can check yourself, in either theme, on every screen.
+          </p>
+        </div>
+
+        <ul class="accessibility-list">
+          <li>Every piece of text meets a 7:1 contrast ratio, in both themes.</li>
+          <li>Every interactive element has a visible keyboard focus ring, not just a color change.</li>
+          <li>Every button, link, and form field has a 44&times;44px minimum touch target.</li>
+          <li>Light and dark themes are equally complete &mdash; try the toggle in the header.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band" id="get-started">
+      <div class="section-inner cta-inner">
+        <h2>Stop re-explaining your folder structure to every new hire.</h2>
+        <p>Set up VideoPM once. Every project after that follows the same structure automatically.</p>
+        <a class="btn btn-primary btn-large" href="../Registration Page/index.html">Get started</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div>
+        <a class="logo" href="#top">
+          <img class="logo-mark" src="../assets/icon.svg" alt="" width="26" height="26" />
+          VideoPM
+        </a>
+        <p class="footer-tagline">Workflow for video production teams.</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#product">Product</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#accessibility">Accessibility</a></li>
+          <li><a href="../Login Page/index.html" id="login">Log in</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer-note">
+        &copy; 2026 VideoPM. This is a UI/UX design prototype built for the VideoPM
+        project &mdash; not a live product.
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
