@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create your account — VideoPM</title>
+  <meta name="description" content="Set up your team's VideoPM workspace — folder structure, phase checklists, and export presets, ready on every project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="auth-header">
+    <a class="logo" href="../Landing Page/index.html">
+      <img class="logo-mark" src="../assets/icon.svg" alt="" width="26" height="26" />
+      VideoPM
+    </a>
+
+    <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="2" x2="12" y2="4.5"/>
+          <line x1="12" y1="19.5" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="4.5" y2="12"/>
+          <line x1="19.5" y1="12" x2="22" y2="12"/>
+          <line x1="4.9" y1="4.9" x2="6.6" y2="6.6"/>
+          <line x1="17.4" y1="17.4" x2="19.1" y2="19.1"/>
+          <line x1="4.9" y1="19.1" x2="6.6" y2="17.4"/>
+          <line x1="17.4" y1="6.6" x2="19.1" y2="4.9"/>
+        </g>
+      </svg>
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+      <span class="visually-hidden">Switch to dark theme</span>
+    </button>
+  </header>
+
+  <main id="main" class="auth-layout">
+    <section class="auth-brand">
+      <div class="auth-brand-inner">
+        <h1>Set up your team&rsquo;s workspace in a few minutes.</h1>
+        <p>
+          Every project your team creates after this starts with the same folder
+          structure, checklist templates, and export presets &mdash; automatically.
+        </p>
+        <ul class="trust-list">
+          <li>The same folder structure and checklist templates on every project</li>
+          <li>Phases that gate on real checklists, not memory</li>
+          <li>WCAG AAA accessible, in light or dark</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="auth-form-panel">
+      <div class="auth-form-wrap">
+        <a class="logo logo-compact" href="../Landing Page/index.html">
+          <img class="logo-mark" src="../assets/icon.svg" alt="" width="26" height="26" />
+          VideoPM
+        </a>
+
+        <h2>Create your account</h2>
+        <p class="form-subtext">You&rsquo;ll be the first member &mdash; invite the rest of your team after this.</p>
+
+        <output class="form-status" id="formStatus" aria-live="polite" hidden></output>
+
+        <form id="registerForm" novalidate>
+          <div class="field-group">
+            <label for="fullName">Full name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              autocomplete="name"
+              placeholder="Jordan Lee"
+              required
+              aria-describedby="fullNameError"
+            />
+            <p class="field-error" id="fullNameError" hidden></p>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Work email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="you@studio.com"
+              required
+              aria-describedby="emailError"
+            />
+            <p class="field-error" id="emailError" hidden></p>
+          </div>
+
+          <div class="field-group">
+            <label for="teamName">Team or studio name</label>
+            <input
+              type="text"
+              id="teamName"
+              name="teamName"
+              autocomplete="organization"
+              placeholder="Acme Video Studio"
+              required
+              aria-describedby="teamNameError"
+            />
+            <p class="field-error" id="teamNameError" hidden></p>
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <div class="password-field">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                required
+                aria-describedby="passwordRequirements passwordError"
+              />
+              <button type="button" class="password-toggle" id="passwordToggle" aria-pressed="false">
+                <svg class="icon icon-eye" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+                <svg class="icon icon-eye-off" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                  <line x1="3" y1="21" x2="21" y2="3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+                <span class="visually-hidden">Show password</span>
+              </button>
+            </div>
+            <ul class="password-requirements" id="passwordRequirements">
+              <li data-rule="length" data-met="false">
+                <span class="visually-hidden">Not yet met: </span>At least 8 characters
+              </li>
+              <li data-rule="number" data-met="false">
+                <span class="visually-hidden">Not yet met: </span>At least one number
+              </li>
+            </ul>
+            <p class="field-error" id="passwordError" hidden></p>
+          </div>
+
+          <div class="field-group">
+            <label class="checkbox-field checkbox-field--wrap">
+              <input type="checkbox" id="terms" name="terms" required aria-describedby="termsError" />
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+            <p class="field-error" id="termsError" hidden></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-large">Create account</button>
+        </form>
+
+        <div class="divider"><span>or</span></div>
+
+        <p class="signup-line">
+          Already have an account?
+          <a href="../Login Page/index.html">Log in</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
